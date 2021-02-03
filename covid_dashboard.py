@@ -10,8 +10,8 @@ import streamlit as st
 import plotly.express as px
 from plotly.subplots import make_subplots
 
-time_data = pd.read_csv('C:/Users/cansu/Desktop/streamlit_dashboard/full_grouped.csv')
-country_data = pd.read_csv('C:/Users/cansu/Desktop/streamlit_dashboard/country_wise_latest.csv')
+time_data = pd.read_csv('full_grouped.csv')
+country_data = pd.read_csv('country_wise_latest.csv')
 country_data = country_data.melt(id_vars = ['Country/Region'], value_vars = ['Confirmed', 'Deaths', 'Recovered', 'Active'],
            var_name ='Status', value_name ='Number')
 
